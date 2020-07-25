@@ -1,0 +1,62 @@
+:root {
+  --white: #fff;
+  --trump-orange: #f8ca4d;
+  --mid-trump-orange: #ff974f;
+  --light-black: #333;
+}
+
+body {
+  background-color: var(--trump-orange);
+  color: var(--white);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.heading {
+  margin: 50px auto;
+  padding-top: 0;
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.heading > p {
+  position: relative;
+  bottom: 25px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.heading a {
+  font-weight: bold;
+}
+
+.heading a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.heading a:hover {
+  color: var(--light-black);
+}
+/*END page styles*/
+
+* {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.nav-toggle-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#nav-toggles {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}

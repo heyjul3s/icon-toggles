@@ -1,0 +1,101 @@
+/*------------------ TOGGLE 3  ------------------*/
+
+#nav-toggle-3 span::before,
+#nav-toggle-3 span::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--white);
+  width: 36px;
+  height: 6px;
+  margin: 47.5% 27%;
+  z-index: 1;
+}
+
+#nav-toggle-3 .bar-1::before,
+#nav-toggle-3 .bar-1::after,
+#nav-toggle-3 .bar-2::before,
+#nav-toggle-3 .bar-2::after,
+#nav-toggle-3 .bar-3::before,
+#nav-toggle-3 .bar-3::after {
+  width: 18px;
+  height: 6px;
+}
+
+#nav-toggle-3 span,
+#nav-toggle-3 span::before,
+#nav-toggle-3 span::after {
+  transition: transform 300ms ease-out, width 300ms ease-out,
+    left 300ms ease-in-out, top 300ms ease-in-out;
+}
+
+/*default*/
+#nav-toggle-3 .bar-1::before {
+  top: -10px;
+  left: 0;
+}
+
+#nav-toggle-3 .bar-1::after {
+  top: -10px;
+  left: 18px;
+}
+
+#nav-toggle-3 .bar-2::before {
+  top: 0;
+  left: 0;
+}
+
+#nav-toggle-3 .bar-2::after {
+  top: 0;
+  left: 18px;
+}
+
+#nav-toggle-3 .bar-3::before {
+  top: 10px;
+  left: 0;
+}
+
+#nav-toggle-3 .bar-3::after {
+  top: 10;
+  left: 18px;
+}
+
+/*active*/
+#nav-toggle-3.active .bar-1::before {
+  top: -5px;
+  left: 3px;
+  transform: rotate(-315deg);
+}
+
+#nav-toggle-3.active .bar-1::after {
+  top: -6px;
+  left: 16px;
+  transform: rotate(315deg);
+}
+
+#nav-toggle-3.active .bar-2::before {
+  top: 1px;
+  left: 17px;
+  width: 3px;
+  transform: rotate(45deg);
+}
+
+#nav-toggle-3.active .bar-2::after {
+  top: 1px;
+  left: 17px;
+  width: 3px;
+  transform: rotate(-45deg);
+}
+
+#nav-toggle-3.active .bar-3::before {
+  top: 8px;
+  left: 2px;
+  transform: rotate(315deg);
+}
+
+#nav-toggle-3.active .bar-3::after {
+  top: 8px;
+  left: 16px;
+  transform: rotate(-315deg);
+}

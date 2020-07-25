@@ -1,0 +1,44 @@
+/*------------------ TOGGLE 1  ------------------*/
+
+#nav-toggle-1 span {
+  margin: 47.5% 27%;
+}
+
+#nav-toggle-1 .bar-1,
+#nav-toggle-1 .bar-3 {
+  transition: transform 300ms ease-out, top 300ms ease-in-out;
+}
+
+#nav-toggle-1 .bar-2 {
+  transition: transform 350ms ease-out, top 300ms ease-in-out;
+}
+
+/*default*/
+#nav-toggle-1 .bar-1 {
+  top: -10px;
+}
+#nav-toggle-1 .bar-2 {
+  top: 0;
+}
+#nav-toggle-1 .bar-3 {
+  top: 10px;
+}
+
+/*active*/
+#nav-toggle-1.active .bar-1,
+#nav-toggle-1.active .bar-2,
+#nav-toggle-1.active .bar-3 {
+  top: 0;
+}
+
+#nav-toggle-1.active .bar-1 {
+  transform: rotate(495deg);
+}
+
+#nav-toggle-1.active .bar-2 {
+  transform: rotate(225deg);
+}
+
+#nav-toggle-1.active .bar-3 {
+  transform: rotate(135deg);
+}

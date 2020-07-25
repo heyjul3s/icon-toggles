@@ -1,0 +1,46 @@
+/*------------------ TOGGLE 4  ------------------*/
+
+#nav-toggle-4 span {
+  margin: 47.5% 27%;
+}
+
+/*default*/
+#nav-toggle-4 .bar-1,
+#nav-toggle-4 .bar-2,
+#nav-toggle-4 .bar-3 {
+  transition: transform 350ms ease-out, opacity 350ms ease-in-out,
+    height 350ms ease-in-out, width 350ms ease-in-out;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+/*default*/
+#nav-toggle-4 .bar-1 {
+  top: -10px;
+}
+#nav-toggle-4 .bar-2 {
+  top: 0;
+}
+#nav-toggle-4 .bar-3 {
+  top: 10px;
+}
+
+/*active*/
+#nav-toggle-4.active .bar-1,
+#nav-toggle-4.active .bar-2,
+#nav-toggle-4.active .bar-3 {
+  top: 0;
+}
+
+#nav-toggle-4.active .bar-1 {
+  transform: rotate3d(0, 0, 1, -225deg);
+}
+
+#nav-toggle-4.active .bar-2 {
+  opacity: 0;
+  transform: rotate3d(1, 1, 1, 360deg) scale(1.2);
+}
+
+#nav-toggle-4.active .bar-3 {
+  transform: rotate3d(0, 0, 1, 225deg);
+}

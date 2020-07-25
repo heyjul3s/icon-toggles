@@ -1,0 +1,110 @@
+/*------------------ TOGGLE 2  ------------------*/
+
+#nav-toggle-2 span::before,
+#nav-toggle-2 span::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--white);
+  width: 36px;
+  height: 6px;
+  margin: 47.5% 27%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#nav-toggle-2 .bar-1::before,
+#nav-toggle-2 .bar-1::after,
+#nav-toggle-2 .bar-2::before,
+#nav-toggle-2 .bar-2::after,
+#nav-toggle-2 .bar-3::before,
+#nav-toggle-2 .bar-3::after {
+  width: 18px;
+  height: 6px;
+}
+
+#nav-toggle-2 span,
+#nav-toggle-2 span::before,
+#nav-toggle-2 span::after {
+  transition: transform 300ms ease-out, right 300ms ease-in-out,
+    width 300ms ease-out, left 300ms ease-in-out, top 300ms ease-in-out;
+}
+
+#nav-toggle-2 .bar-2 span::before,
+#nav-toggle-2 .bar-2 span::after {
+  transition: transform 300ms ease-out, right 300ms ease-in-out,
+    width 200ms ease-out, left 300ms ease-in-out, top 300ms ease-in-out;
+}
+
+/*default*/
+#nav-toggle-2 .bar-1::before {
+  top: -10px;
+  left: 0;
+}
+
+#nav-toggle-2 .bar-1::after {
+  top: -10px;
+  left: 18px;
+}
+
+#nav-toggle-2 .bar-2::before {
+  top: 0;
+  left: 0;
+}
+
+#nav-toggle-2 .bar-2::after {
+  top: 0;
+  left: 18px;
+}
+
+#nav-toggle-2 .bar-3::before {
+  top: 10px;
+  left: 0;
+}
+
+#nav-toggle-2 .bar-3::after {
+  top: 10px;
+  left: 18px;
+}
+
+/*active*/
+#nav-toggle-2.active .bar-1::before {
+  top: -10px;
+  left: -3px;
+  width: 0;
+}
+
+#nav-toggle-2.active .bar-1::after {
+  top: 0;
+  left: 0;
+  width: 36px;
+  transform: rotate(315deg);
+}
+
+#nav-toggle-2.active .bar-2::before {
+  left: 18px;
+  width: 0;
+}
+
+#nav-toggle-2.active .bar-2 {
+  width: 0;
+}
+
+#nav-toggle-2.active .bar-2::after {
+  right: 0;
+  width: 0;
+}
+
+#nav-toggle-2.active .bar-3::before {
+  top: 8px;
+  left: -1px;
+  width: 0;
+}
+
+#nav-toggle-2.active .bar-3::after {
+  top: 0;
+  left: 0;
+  width: 36px;
+  transform: rotate(-315deg);
+}
