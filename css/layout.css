@@ -11,36 +11,110 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-.heading {
-  margin: 50px auto;
-  padding-top: 0;
-  text-transform: uppercase;
-  font-size: 3em;
-  line-height: 2em;
+a {
+  text-decoration: none;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner {
+    flex-direction: row;
+    background: transparent;
+    border-radius: 6px;
+    align-items: center;
+  }
+}
+
+.description {
+  position: relative;
+  width: 100%;
+  flex: 1;
   text-align: center;
 }
 
-.heading > p {
-  position: relative;
-  bottom: 25px;
-  margin: 0;
-  padding: 0;
-  font-size: 0.8em;
-  font-weight: normal;
+.description::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.heading a {
-  font-weight: bold;
+@media only screen and (min-width: 992px) {
+  .description {
+    flex: 1;
+    text-align: left;
+  }
+
+  .description::after {
+    display: none;
+  }
 }
 
-.heading a {
-  text-decoration: none;
-  color: var(--white);
+.description .content {
+  display: inline-block;
+  padding: 1rem;
+  background: transparent;
+  border-radius: 0;
 }
 
-.heading a:hover {
-  color: var(--light-black);
+@media only screen and (min-width: 992px) {
+  .description .content {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.7);
+  }
 }
+
+.description h1,
+.description p {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.description h1 {
+  font-weight: 900;
+}
+
+.social-bar {
+  display: flex;
+  background: transparent;
+  border-radius: 6px;
+}
+
+.social-bar a {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.social-bar a svg {
+  padding-right: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .social-bar {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .social-bar a {
+    font-size: 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
 /*END page styles*/
 
 * {
