@@ -80,6 +80,7 @@ a {
 .description p {
   display: inline-block;
   font-size: 1rem;
+  margin: 0;
 }
 
 .description h1 {
